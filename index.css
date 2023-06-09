@@ -3,21 +3,15 @@ body {
   background: #222;
   padding-top: 5em;
   display: flex;
-  justify-content: center;
-  align-items:center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #284d54;
-  color: #AAA;
-  font-family: monospace;
   flex-direction: column;
+  align-items: center;
+}
+
+.typewriter {
+  padding: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* DEMO-SPECIFIC STYLES */
@@ -27,13 +21,39 @@ body {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid rgb(39, 184, 187); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 7%; /* Gives that scrolling effect as the typing happens */
-  pading: 0;
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
-    typing 3s steps(30, end),
-    blink-caret .5s step-end infinite; 
-} 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+.txt {
+  color: #fff;
+font-family: monospace;
+overflow: hidden; /* Ensures the content is not revealed until the animation */
+margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+}
+
+
+.links {
+  padding-top: 15px;
+}
+
+.links ul {
+  padding: 0;
+  margin: 0;
+}
+.links li {
+  list-style-type: none;
+  display: inline;
+  padding: 12px;
+  
+}
+.links li a {
+  font-size: 200%;
+  color: #AAA;
+}
 
 /* The typing effect */
 @keyframes typing {
@@ -45,48 +65,4 @@ body {
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: rgb(39, 184, 187) }
-}
-
-.txt {
-    color: #fff;
-  font-family: monospace;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-}
-
-.profile h1 {
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: .15em;
-    animation: typing 3.5s steps(30, end);
-    -webkit-animation: typing 3.5s steps(30, end);
-}
-.profile__name {
-    text-align: center;
-    font-size: 250%;
-    vertical-align: middle;
-}
-.profile__info {
-    font-size: 200%;
-}
-
-.links {
-    padding-top: 15px;
-}
-
-.links ul {
-    padding: 0;
-    margin: 0;
-}
-.links li {
-    list-style-type: none;
-    display: inline;
-    padding: 12px;
-    
-}
-.links li a {
-    font-size: 200%;
-    color: #AAA;
 }
